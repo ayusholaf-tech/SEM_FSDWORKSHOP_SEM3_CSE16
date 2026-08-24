@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    console.log(3 < 5);
+    console.log(2 + 2);
+    console.log(typeof true);
+    console.log(typeof 'true');
+
+    console.log(5 == '5') // == convert both value in the same type
+    console.log(5 === '5') // === use in javascript
+    console.log(5 !== '5') // !== ise of this
+
+
+    if (true)//false
+    {
+      console.log('Hello');
+    }
+    else {
+      console.log('Hi');
+    }
+
+
+
+    if (30 >= 18) {
+      console.log('Can drive the car.');
+    }
+    else {
+      console.log(`Can't drive the car`);
+    }
+
+
+
+    if (30 >= 18) {
+      console.log('Can drive the car.');
+      console.log('Congrats');
+    }
+    else if (15 >= 14) {
+      console.log('Almost there');
+    }
+    else {
+      console.log('You can not drive');
+    }
+
+
+    console.log(true && true)//anse=wer is true
+    console.log(true && false)//answer is false
+
+    console.log(true || true);//one is true so the answer is true
+    console.log(true || false);//answer is true
+    console.log(!true)//if answer is true it change to false
+    console.log(!false);//is true it change to true
+
+    if (0) {
+      console.log('truthy');                          //false
+    }
+
+    const cartQuantity = 5;
+    if (cartQuantity) {
+      console.log('cart quantity is not empty')      //trutthy
+    }
+
+    console.log(!0);                                //truthy
+
+    console.log('text' / 5);                          //NaN
+
+    let variable1
+    console.log(variable1);                        //undefiend
+
+
+    const result = 0 ? 'truthy' : 'false';       //ternury operator    
+    console.log(result);
+
+
+
+    false && console.log('hello')                 //gaurd operator
+
+    const message = 5 && 'hello'
+    console.log(message);
+
+
+    const currancy = 'EUR' || 'USD';
+    console.log(currancy);
+    const currancy1 = undefined || 'USD';
+    console.log(currancy1);
+
+
+  </script>
+</body>
+
+</html>
