@@ -1,4 +1,4 @@
-import http from "http";
+const http = require("http");
 
 const userdata = [
 
@@ -103,8 +103,21 @@ const server = http.createServer((req, res) => {
     }); 
 
   }
+else if(url.startsWith("/user/") && method == "DELETE"){
 
-  else {
+    const id = url.split("/")[2];
+    const userIndex = userdata.findIndex((u) => u.id == id);
+
+    if(userIndex === -1){
+      return res.end("user not found");
+    }
+
+    userdata.splice(userIndex, 1);
+    res.statusCode = 200;
+    res.end("User deleted successfully");
+  }
+
+  else { 
 
     res.end("No response for this request");
 
